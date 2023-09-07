@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"
+            integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f84fa4bf27.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/category.css">
+
+    <title></title>
+</head>
+<body>
+
+<div class="wrapper">
+    <nav class="navbar_header"></nav>
+    <nav class="body">
+        <section class="container schedule">
+
+            <div class="select-blog">
+                <div class="nav-blog">
+                                <span class="show-select open">
+                                    <p>Danh sách giải đấu</p>
+                                </span>
+                    <!--                <ul class="drop-nav-blog nav-tour-blog">-->
+                    <!--                    <li>-->
+                    <!--                        <a class="innative"  href="">-->
+                    <!--                            Kết thúc môn Bóng bàn Đại hội Thể thao toàn quốc lần thứ IX-->
+                    <!--                        </a>-->
+                    <!--                    </li>-->
+                    <!--                    <li>-->
+                    <!--                        <a href="">-->
+                    <!--                            Cử tạ Hải Dương giành 18 huy chương, phá 2 kỷ lục quốc gia-->
+                    <!--                        </a>-->
+                    <!--                    </li>-->
+                    <!--                    <li>-->
+                    <!--                        <a href="">-->
+                    <!--                            Ấm tình Hải Dương - Viêng Chăn kết nghĩa-->
+                    <!--                        </a>-->
+                    <!--                    </li>-->
+                    <!--                    <li>-->
+                    <!--                        <a href="">-->
+                    <!--                            Kết thúc môn Bóng bàn Đại hội Thể thao toàn quốc lần thứ IX-->
+                    <!--                        </a>-->
+                    <!--                    </li>-->
+                    <!--                </ul>-->
+                    <div class="drop-nav-blog nav-tour-blog">
+                        <button class="native" data-name="all">Kết thúc môn Bóng bàn Đại hội Thể thao toàn quốc lần thứ
+                            IX
+                        </button>
+                        <button data-name="hanoi">Giải vô địch Quốc gia</button>
+                        <button data-name="haiphong">HGiải Vô địch trẻ cầu lông Quốc gia lần thứ XII</button>
+                        <button data-name="sapa">Giải Vô địch trẻ cầu lông Quốc gia lần thứ XII</button>
+                        <button data-name="ninhbinh">Giải vô địch Quốc gia</button>
+                        <button data-name="hoian">Giải Vô địch trẻ cầu lông Quốc gia lần thứ XII</button>
+                    </div>
+                </div>
+            </div>
+            <div class="results">
+                <div class="title-main">
+                    <div class="title-text">
+                        <h2>Kết quả thi đấu giải vô địch Quốc gia</h2>
+                    </div>
+                    <div class="grid-filter" id="btn-grid">
+                        <button href="./detailDestination.html" class="btn-view">Xem lịch thi đấu
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="list-search">
+                    <div class="btn-filter">
+                        <button class="active" data-name="all">Tất cả</button>
+                        <button data-name="soccer">Bóng đá</button>
+                        <button data-name="badminton">Cầu lông</button>
+                        <button data-name="swimming">Bơi lội</button>
+                    </div>
+                </div>
+                <div class="results-table" data-name="swimming">
+                    <table class="table table-striped">
+                        <p class="table-title"> Lịch thi đấu bơi lội</p>
+                        <tbody>
+                        <tr>
+                            <td class="time"><a>10:20 - 20/6 </a></td>
+                            <td class="content">đơn nam</td>
+                            <td class="list"><a href="" data-bs-toggle="modal" data-bs-target="#myModal">Bảng xếp
+                                hạng </a>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                     fill="none">
+                                    <path d="M10.001 19C5.05097 19 1.00098 14.95 1.00098 9.99999C1.00098 5.05 5.05097 1 10.001 1C14.951 1 19.001 5.05 19.001 9.99999C19.001 14.95 14.951 19 10.001 19ZM10.001 2.8C6.04097 2.8 2.80098 6.04 2.80098 9.99999C2.80098 13.96 6.04097 17.2 10.001 17.2C13.961 17.2 17.201 13.96 17.201 9.99999C17.201 6.04 13.961 2.8 10.001 2.8Z"
+                                          fill="#4AA3F5"/>
+                                    <path d="M10.0016 14.5C9.46156 14.5 9.10156 14.14 9.10156 13.6V9.09999C9.10156 8.55999 9.46156 8.19999 10.0016 8.19999C10.5416 8.19999 10.9016 8.55999 10.9016 9.09999V13.6C10.9016 14.14 10.5416 14.5 10.0016 14.5Z"
+                                          fill="#4AA3F5"/>
+                                    <path d="M10.0016 7.29999C10.4986 7.29999 10.9016 6.89705 10.9016 6.39999C10.9016 5.90294 10.4986 5.49999 10.0016 5.49999C9.50451 5.49999 9.10156 5.90294 9.10156 6.39999C9.10156 6.89705 9.50451 7.29999 10.0016 7.29999Z"
+                                          fill="#4AA3F5"/>
+                                </svg>
+                            </td>
+                            <td class="format">Vòng loại</td>
+                            <td>
+                                <a href="#">
+                                    <img src='/image/next.png' alt="" style="width: 20px; height: auto"> </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time"><a>10:20 - 20/6 </a></td>
+                            <td class="content">đơn nam</td>
+                            <td class="list"><a href="" data-bs-toggle="modal" data-bs-target="#myModal">Bảng xếp
+                                hạng </a>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                     fill="none">
+                                    <path d="M10.001 19C5.05097 19 1.00098 14.95 1.00098 9.99999C1.00098 5.05 5.05097 1 10.001 1C14.951 1 19.001 5.05 19.001 9.99999C19.001 14.95 14.951 19 10.001 19ZM10.001 2.8C6.04097 2.8 2.80098 6.04 2.80098 9.99999C2.80098 13.96 6.04097 17.2 10.001 17.2C13.961 17.2 17.201 13.96 17.201 9.99999C17.201 6.04 13.961 2.8 10.001 2.8Z"
+                                          fill="#4AA3F5"/>
+                                    <path d="M10.0016 14.5C9.46156 14.5 9.10156 14.14 9.10156 13.6V9.09999C9.10156 8.55999 9.46156 8.19999 10.0016 8.19999C10.5416 8.19999 10.9016 8.55999 10.9016 9.09999V13.6C10.9016 14.14 10.5416 14.5 10.0016 14.5Z"
+                                          fill="#4AA3F5"/>
+                                    <path d="M10.0016 7.29999C10.4986 7.29999 10.9016 6.89705 10.9016 6.39999C10.9016 5.90294 10.4986 5.49999 10.0016 5.49999C9.50451 5.49999 9.10156 5.90294 9.10156 6.39999C9.10156 6.89705 9.50451 7.29999 10.0016 7.29999Z"
+                                          fill="#4AA3F5"/>
+                                </svg>
+                            </td>
+                            <td class="format">Vòng loại</td>
+                            <td>
+                                <a href="#">
+                                    <img src='/image/next.png' alt="" style="width: 20px; height: auto"> </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time"><a>10:20 - 20/6 </a></td>
+                            <td class="content">đơn nam</td>
+                            <td class="list"><a href="">Bảng xếp hạng</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                     fill="none">
+                                    <path d="M10.001 19C5.05097 19 1.00098 14.95 1.00098 9.99999C1.00098 5.05 5.05097 1 10.001 1C14.951 1 19.001 5.05 19.001 9.99999C19.001 14.95 14.951 19 10.001 19ZM10.001 2.8C6.04097 2.8 2.80098 6.04 2.80098 9.99999C2.80098 13.96 6.04097 17.2 10.001 17.2C13.961 17.2 17.201 13.96 17.201 9.99999C17.201 6.04 13.961 2.8 10.001 2.8Z"
+                                          fill="#4AA3F5"/>
+                                    <path d="M10.0016 14.5C9.46156 14.5 9.10156 14.14 9.10156 13.6V9.09999C9.10156 8.55999 9.46156 8.19999 10.0016 8.19999C10.5416 8.19999 10.9016 8.55999 10.9016 9.09999V13.6C10.9016 14.14 10.5416 14.5 10.0016 14.5Z"
+                                          fill="#4AA3F5"/>
+                                    <path d="M10.0016 7.29999C10.4986 7.29999 10.9016 6.89705 10.9016 6.39999C10.9016 5.90294 10.4986 5.49999 10.0016 5.49999C9.50451 5.49999 9.10156 5.90294 9.10156 6.39999C9.10156 6.89705 9.50451 7.29999 10.0016 7.29999Z"
+                                          fill="#4AA3F5"/>
+                                </svg>
+                            </td>
+                            <td class="format">Vòng loại</td>
+                            <td>
+                                <a href="#">
+                                    <img src='/image/next.png' alt="" style="width: 20px; height: auto"> </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time"><a>10:20 - 20/6 </a></td>
+                            <td class="content">đơn nam</td>
+                            <td class="list"><a href="">Bảng xếp hạng</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                     fill="none">
+                                    <path d="M10.001 19C5.05097 19 1.00098 14.95 1.00098 9.99999C1.00098 5.05 5.05097 1 10.001 1C14.951 1 19.001 5.05 19.001 9.99999C19.001 14.95 14.951 19 10.001 19ZM10.001 2.8C6.04097 2.8 2.80098 6.04 2.80098 9.99999C2.80098 13.96 6.04097 17.2 10.001 17.2C13.961 17.2 17.201 13.96 17.201 9.99999C17.201 6.04 13.961 2.8 10.001 2.8Z"
+                                          fill="#4AA3F5"/>
+                                    <path d="M10.0016 14.5C9.46156 14.5 9.10156 14.14 9.10156 13.6V9.09999C9.10156 8.55999 9.46156 8.19999 10.0016 8.19999C10.5416 8.19999 10.9016 8.55999 10.9016 9.09999V13.6C10.9016 14.14 10.5416 14.5 10.0016 14.5Z"
+                                          fill="#4AA3F5"/>
+                                    <path d="M10.0016 7.29999C10.4986 7.29999 10.9016 6.89705 10.9016 6.39999C10.9016 5.90294 10.4986 5.49999 10.0016 5.49999C9.50451 5.49999 9.10156 5.90294 9.10156 6.39999C9.10156 6.89705 9.50451 7.29999 10.0016 7.29999Z"
+                                          fill="#4AA3F5"/>
+                                </svg>
+                            </td>
+                            <td class="format">Vòng loại</td>
+                            <td>
+                                <a href="#">
+                                    <img src='/image/next.png' alt="" style="width: 20px; height: auto"> </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="results-table" data-name="badminton">
+                    <table class="table table-striped">
+                        <p class="table-title"> Lịch thi đấu cầu lông</p>
+                        <tbody>
+                        <tr>
+                            <td class="time"><a>10:20 - 20/6 </a></td>
+                            <td class="content">đơn nam</td>
+                            <td class="list"><a href="" data-bs-toggle="modal" data-bs-target="#myModal">TP.Hồ Chí
+                                Minh</a>
+                                <span>3 - 2</span>
+                                <a href="" data-bs-toggle="modal" data-bs-target="#myModal">TP.Hà Nội</a>
+                            </td>
+                            <td class="format">Vòng loại</td>
+                            <td>
+                                <a href="#">
+                                    <img src='/image/next.png' alt="" style="width: 20px; height: auto"> </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time"><a>10:20 - 20/6 </a></td>
+                            <td class="content">đơn nam</td>
+                            <td class="list"><a href="">tp.Hồ Chí Minh</a>
+                                <img src='/image/Group6315.png' alt="">
+                                <a href="">tp.Hà Nội</a>
+                            </td>
+                            <td class="format">Vòng loại</td>
+                            <td>
+                                <a href="#">
+                                    <img src='/image/next.png' alt="" style="width: 20px; height: auto"> </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time"><a>10:20 - 20/6 </a></td>
+                            <td class="content">đơn nam</td>
+                            <td class="list"><a href="" data-bs-toggle="modal" data-bs-target="#myModal">TP.Hồ Chí
+                                Minh</a>
+                                <span>3 - 2</span>
+                                <a href="" data-bs-toggle="modal" data-bs-target="#myModal">TP.Hà Nội</a>
+                            </td>
+                            <td class="format">Vòng loại</td>
+                            <td>
+                                <a href="#">
+                                    <img src='/image/next.png' alt="" style="width: 20px; height: auto"> </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="results-table" data-name="soccer">
+                    <table class="table table-striped">
+                        <p class="table-title"> Lịch thi đấu bóng đá</p>
+                        <tbody>
+                        <tr>
+                            <td class="time"><a>10:20 - 20/6 </a></td>
+                            <td class="content">đơn nam</td>
+                            <td class="list"><a href="">Bảng xếp hạng</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                     fill="none">
+                                    <path d="M10.001 19C5.05097 19 1.00098 14.95 1.00098 9.99999C1.00098 5.05 5.05097 1 10.001 1C14.951 1 19.001 5.05 19.001 9.99999C19.001 14.95 14.951 19 10.001 19ZM10.001 2.8C6.04097 2.8 2.80098 6.04 2.80098 9.99999C2.80098 13.96 6.04097 17.2 10.001 17.2C13.961 17.2 17.201 13.96 17.201 9.99999C17.201 6.04 13.961 2.8 10.001 2.8Z"
+                                          fill="#4AA3F5"/>
+                                    <path d="M10.0016 14.5C9.46156 14.5 9.10156 14.14 9.10156 13.6V9.09999C9.10156 8.55999 9.46156 8.19999 10.0016 8.19999C10.5416 8.19999 10.9016 8.55999 10.9016 9.09999V13.6C10.9016 14.14 10.5416 14.5 10.0016 14.5Z"
+                                          fill="#4AA3F5"/>
+                                    <path d="M10.0016 7.29999C10.4986 7.29999 10.9016 6.89705 10.9016 6.39999C10.9016 5.90294 10.4986 5.49999 10.0016 5.49999C9.50451 5.49999 9.10156 5.90294 9.10156 6.39999C9.10156 6.89705 9.50451 7.29999 10.0016 7.29999Z"
+                                          fill="#4AA3F5"/>
+                                </svg>
+                            </td>
+                            <td class="format">Vòng loại</td>
+                            <td>
+                                <a href="#">
+                                    <img src='/image/next.png' alt="" style="width: 20px; height: auto"> </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time"><a>10:20 - 20/6 </a></td>
+                            <td class="content">đơn nam</td>
+                            <td class="list"><a href="">Bảng xếp hạng</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                     fill="none">
+                                    <path d="M10.001 19C5.05097 19 1.00098 14.95 1.00098 9.99999C1.00098 5.05 5.05097 1 10.001 1C14.951 1 19.001 5.05 19.001 9.99999C19.001 14.95 14.951 19 10.001 19ZM10.001 2.8C6.04097 2.8 2.80098 6.04 2.80098 9.99999C2.80098 13.96 6.04097 17.2 10.001 17.2C13.961 17.2 17.201 13.96 17.201 9.99999C17.201 6.04 13.961 2.8 10.001 2.8Z"
+                                          fill="#4AA3F5"/>
+                                    <path d="M10.0016 14.5C9.46156 14.5 9.10156 14.14 9.10156 13.6V9.09999C9.10156 8.55999 9.46156 8.19999 10.0016 8.19999C10.5416 8.19999 10.9016 8.55999 10.9016 9.09999V13.6C10.9016 14.14 10.5416 14.5 10.0016 14.5Z"
+                                          fill="#4AA3F5"/>
+                                    <path d="M10.0016 7.29999C10.4986 7.29999 10.9016 6.89705 10.9016 6.39999C10.9016 5.90294 10.4986 5.49999 10.0016 5.49999C9.50451 5.49999 9.10156 5.90294 9.10156 6.39999C9.10156 6.89705 9.50451 7.29999 10.0016 7.29999Z"
+                                          fill="#4AA3F5"/>
+                                </svg>
+                            </td>
+                            <td class="format">Vòng loại</td>
+                            <td>
+                                <a href="#">
+                                    <img src='/image/next.png' alt="" style="width: 20px; height: auto"> </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time"><a>10:20 - 20/6 </a></td>
+                            <td class="content">đơn nam</td>
+                            <td class="list"><a href="">Bảng xếp hạng</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                     fill="none">
+                                    <path d="M10.001 19C5.05097 19 1.00098 14.95 1.00098 9.99999C1.00098 5.05 5.05097 1 10.001 1C14.951 1 19.001 5.05 19.001 9.99999C19.001 14.95 14.951 19 10.001 19ZM10.001 2.8C6.04097 2.8 2.80098 6.04 2.80098 9.99999C2.80098 13.96 6.04097 17.2 10.001 17.2C13.961 17.2 17.201 13.96 17.201 9.99999C17.201 6.04 13.961 2.8 10.001 2.8Z"
+                                          fill="#4AA3F5"/>
+                                    <path d="M10.0016 14.5C9.46156 14.5 9.10156 14.14 9.10156 13.6V9.09999C9.10156 8.55999 9.46156 8.19999 10.0016 8.19999C10.5416 8.19999 10.9016 8.55999 10.9016 9.09999V13.6C10.9016 14.14 10.5416 14.5 10.0016 14.5Z"
+                                          fill="#4AA3F5"/>
+                                    <path d="M10.0016 7.29999C10.4986 7.29999 10.9016 6.89705 10.9016 6.39999C10.9016 5.90294 10.4986 5.49999 10.0016 5.49999C9.50451 5.49999 9.10156 5.90294 9.10156 6.39999C9.10156 6.89705 9.50451 7.29999 10.0016 7.29999Z"
+                                          fill="#4AA3F5"/>
+                                </svg>
+                            </td>
+                            <td class="format">Vòng loại</td>
+                            <td>
+                                <a href="#">
+                                    <img src='/image/next.png' alt="" style="width: 20px; height: auto"> </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+    </nav>
+    <nav class="navbar_footer" style=".box-footer{ margin-top: 0}"></nav>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header float-right">
+                    <h5>Danh sách VẬN ĐỘNG VIÊN</h5>
+                    <div class="text-right">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                </div>
+                <div class="modal-body">
+
+                    <div>
+                        <table class="table table-bordered">
+
+                            <tbody>
+                            <tr>
+                                <td scope="row">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                         fill="none">
+                                        <g clip-path="url(#clip0_660_13770)">
+                                            <path opacity="0.5"
+                                                  d="M7.99995 8.02504C7.99995 8.185 7.95205 8.34496 7.86401 8.46494L3.86397 14.4649C3.71997 14.681 3.48003 14.825 3.19995 14.825H0.799951C0.360059 14.825 0 14.4649 0 14.025C0 13.8649 0.0480469 13.705 0.135938 13.585L3.83994 8.02504L0.135938 2.46494C0.0480469 2.34496 0 2.185 0 2.02504C0 1.585 0.360059 1.22495 0.799951 1.22495H3.19995C3.48003 1.22495 3.71997 1.36894 3.86397 1.585L7.86401 7.585C7.95205 7.70497 7.99995 7.86494 7.99995 8.02504Z"
+                                                  fill="#4AA3F5"/>
+                                            <path d="M16.0001 8.02504C16.0001 8.185 15.9521 8.34496 15.864 8.46494L11.8641 14.4649C11.7201 14.681 11.48 14.825 11.2001 14.825H8.8001C8.36006 14.825 8 14.4649 8 14.025C8 13.8649 8.04805 13.705 8.13608 13.585L11.8401 8.02504L8.13608 2.46494C8.04805 2.34496 8 2.185 8 2.02504C8 1.585 8.36006 1.22495 8.8001 1.22495H11.2001C11.48 1.22495 11.7201 1.36894 11.8641 1.585L15.864 7.585C15.9521 7.70497 16.0001 7.86494 16.0001 8.02504Z"
+                                                  fill="#4AA3F5"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_660_13770">
+                                                <rect width="16" height="16" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    1
+                                </td>
+                                <td>Samso</td>
+                                <td>Natto</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                         fill="none">
+                                        <g clip-path="url(#clip0_660_13770)">
+                                            <path opacity="0.5"
+                                                  d="M7.99995 8.02504C7.99995 8.185 7.95205 8.34496 7.86401 8.46494L3.86397 14.4649C3.71997 14.681 3.48003 14.825 3.19995 14.825H0.799951C0.360059 14.825 0 14.4649 0 14.025C0 13.8649 0.0480469 13.705 0.135938 13.585L3.83994 8.02504L0.135938 2.46494C0.0480469 2.34496 0 2.185 0 2.02504C0 1.585 0.360059 1.22495 0.799951 1.22495H3.19995C3.48003 1.22495 3.71997 1.36894 3.86397 1.585L7.86401 7.585C7.95205 7.70497 7.99995 7.86494 7.99995 8.02504Z"
+                                                  fill="#4AA3F5"/>
+                                            <path d="M16.0001 8.02504C16.0001 8.185 15.9521 8.34496 15.864 8.46494L11.8641 14.4649C11.7201 14.681 11.48 14.825 11.2001 14.825H8.8001C8.36006 14.825 8 14.4649 8 14.025C8 13.8649 8.04805 13.705 8.13608 13.585L11.8401 8.02504L8.13608 2.46494C8.04805 2.34496 8 2.185 8 2.02504C8 1.585 8.36006 1.22495 8.8001 1.22495H11.2001C11.48 1.22495 11.7201 1.36894 11.8641 1.585L15.864 7.585C15.9521 7.70497 16.0001 7.86494 16.0001 8.02504Z"
+                                                  fill="#4AA3F5"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_660_13770">
+                                                <rect width="16" height="16" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    2
+                                </td>
+                                <td>Tinor</td>
+                                <td>Horton</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                         fill="none">
+                                        <g clip-path="url(#clip0_660_13770)">
+                                            <path opacity="0.5"
+                                                  d="M7.99995 8.02504C7.99995 8.185 7.95205 8.34496 7.86401 8.46494L3.86397 14.4649C3.71997 14.681 3.48003 14.825 3.19995 14.825H0.799951C0.360059 14.825 0 14.4649 0 14.025C0 13.8649 0.0480469 13.705 0.135938 13.585L3.83994 8.02504L0.135938 2.46494C0.0480469 2.34496 0 2.185 0 2.02504C0 1.585 0.360059 1.22495 0.799951 1.22495H3.19995C3.48003 1.22495 3.71997 1.36894 3.86397 1.585L7.86401 7.585C7.95205 7.70497 7.99995 7.86494 7.99995 8.02504Z"
+                                                  fill="#4AA3F5"/>
+                                            <path d="M16.0001 8.02504C16.0001 8.185 15.9521 8.34496 15.864 8.46494L11.8641 14.4649C11.7201 14.681 11.48 14.825 11.2001 14.825H8.8001C8.36006 14.825 8 14.4649 8 14.025C8 13.8649 8.04805 13.705 8.13608 13.585L11.8401 8.02504L8.13608 2.46494C8.04805 2.34496 8 2.185 8 2.02504C8 1.585 8.36006 1.22495 8.8001 1.22495H11.2001C11.48 1.22495 11.7201 1.36894 11.8641 1.585L15.864 7.585C15.9521 7.70497 16.0001 7.86494 16.0001 8.02504Z"
+                                                  fill="#4AA3F5"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_660_13770">
+                                                <rect width="16" height="16" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    3
+                                </td>
+                                <td>Mythor</td>
+                                <td>Bully</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+<script src="/js/embed_file.js"></script>
+<script src="/js/category.js"></script>

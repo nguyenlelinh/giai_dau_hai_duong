@@ -1,0 +1,91 @@
+.box-page-blog {
+    margin: auto;
+
+    /*padding-right: 11px;*/
+    /*padding-top: 35px;*/
+    /*margin: 0 auto;*/
+    /*justify-content: center;*/
+    /*display: grid;*/
+    /*grid-template-columns: 75% 25%;*/
+    /*gap: 20px;*/
+}
+.box-page-blog .wrap-page-blog {
+    padding: 15px 10px;
+    gap: 20px;
+}
+.box-page-blog .wrap-page-blog .content-blog {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+}
+.box-page-blog .wrap-page-blog .content-blog h1 {
+    color: #212529;
+    font-family: var(--second-font);
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 550;
+    line-height: 34px;
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: left;
+}
+.box-page-blog .wrap-page-blog .content-blog .img-view-blog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    width: 100%;
+    height: 40vh;
+    overflow: hidden;
+    border-radius: 12px;
+}
+.box-page-blog .wrap-page-blog .content-blog .text-view-blog p {
+    color: #212529;
+    text-align: justify;
+    font-family: VAR(--second-font);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+.box-page-blog .wrap-page-blog .content-blog .text-view-blog .author-view {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin: 30px 0;
+}
+.box-page-blog .wrap-page-blog .content-blog .text-view-blog .author-view p{
+    color: #212529;
+    font-family: var(--second-font);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.box-page-blog .wrap-page-blog .content-blog .text-view-blog .btn-share {
+    border-left: 5px solid #D4000E;
+    background-color: #FDF5F1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.box-page-blog .wrap-page-blog .content-blog .text-view-blog .btn-share div{
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+.box-page-blog .wrap-page-blog .content-blog .text-view-blog .btn-share a{
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+}
+.box-page-blog .wrap-page-blog .content-blog .text-view-blog .btn-share a:hover{
+    cursor: pointer;
+    font-size: 22px;
+
+}
+.box-page-blog .wrap-page-blog .content-blog .text-view-blog .btn-share .social a img{
+    width: 73%;
+}
