@@ -243,8 +243,8 @@
     margin-top: 150px;
 }
 .fade .modal-dialog .modal-header {
-    /*background: url(image/Group6362.png);*/
-    background-image: url('/cut_figma/image/Group6362.png');
+    background: url(..image/Group6362.png);
+    /*background-image: url('/cut_figma/image/Group6362.png');*/
 }
 .fade .modal-dialog .modal-header h5{
     color: #FFF;
