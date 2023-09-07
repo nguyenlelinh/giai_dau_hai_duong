@@ -8,8 +8,8 @@ $('.slide-blog').not('.slick-initialized').slick({
     dots: false,
     autoplay: false,
     arrows: true,
-    prevArrow: "<button type='button' class='slick-prev pull-left'>  <img src='/image/Group19.svg' alt=\"\"  style=\"width: 20px; height: auto\"></button>",
-    nextArrow: "<button type='button' class='slick-next pull-right'><img src='/image/Group20.svg' alt=\"\"  style=\"width: 20px; height: auto\"></button>",
+    prevArrow: "<button type='button' class='slick-prev pull-left'>  <img src='image/Group19.svg' alt=\"\"  style=\"width: 20px; height: auto\"></button>",
+    nextArrow: "<button type='button' class='slick-next pull-right'><img src='image/Group20.svg' alt=\"\"  style=\"width: 20px; height: auto\"></button>",
     // responsive: [
     //     // {
     //     //     breakpoint: 1460,
