@@ -180,9 +180,9 @@
     text-align: left;
     padding-left: 10px;
     margin-bottom: 0;
-    /*background: url(image/Group6360.png);*/
+    background: url(image/Group6360.png);
 
-    background-image: url('/cut_figma/image/Group6360.png');
+    /*background-image: url('/cut_figma/image/Group6360.png');*/
 }
 .results .results-table .table-striped .time{
     color: #3182E2;
