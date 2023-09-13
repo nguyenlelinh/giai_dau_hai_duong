@@ -80,7 +80,7 @@ function calendar() {
 calendar();
 $('.slide-blog').not('.slick-initialized').slick({
     infinite: false,
-    slidesToShow: 5,
+    slidesToShow: 7,
     slidesToScroll: 1,
     // centerMode: true,
     centerPadding: '0px',
@@ -143,17 +143,19 @@ btnFilterCurrent.forEach(div => div.addEventListener("click", filterCardCalendar
 //button share and copy
 const fbButton = document.getElementById('fb-share-button');
 const url = window.location.href;
+if(fbButton) {
 
-fbButton.addEventListener('click', function () {
-    window.open('https://www.facebook.com/sharer/sharer.php?u=' + url,
-        'facebook-share-dialog',
-        'width=800,height=600'
-    );
-    return false;
-});
-const $url = $(location).attr('href');
-const copyText = document.getElementById("copy-link");
-copyText.addEventListener('click', function () {
-    navigator.clipboard.writeText($url);
-    alert("Đã copy đường link ")
-});
+    fbButton.addEventListener('click', function () {
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + url,
+            'facebook-share-dialog',
+            'width=800,height=600'
+        );
+        return false;
+    });
+    const $url = $(location).attr('href');
+    const copyText = document.getElementById("copy-link");
+    copyText.addEventListener('click', function () {
+        navigator.clipboard.writeText($url);
+        alert("Đã copy đường link ")
+    });
+}
