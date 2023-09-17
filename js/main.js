@@ -5,45 +5,26 @@ $('.slide-blog').not('.slick-initialized').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
     speed: 500,
+    initialSlide: 3,
     dots: false,
     autoplay: false,
     arrows: true,
     prevArrow: "<button type='button' class='slick-prev pull-left'><img src='/image/Group19.svg' alt=\"\"  style=\"width: 20px; height: auto\"></button>",
     nextArrow: "<button type='button' class='slick-next pull-right'><img src='/image/Group20.svg' alt=\"\"  style=\"width: 20px; height: auto\"></button>",
-    // responsive: [
-    //     // {
-    //     //     breakpoint: 1460,
-    //     //     settings: {
-    //     //         slidesToShow: 4,
-    //     //     }
-    //     // },
-    //     {
-    //         breakpoint: 1230,
-    //         settings: {
-    //             slidesToShow: 3,
-    //         }
-    //     },
-    //     {
-    //         breakpoint: 1000,
-    //         settings: {
-    //             slidesToShow: 2,
-    //         }
-    //     },
-    //     {
-    //         breakpoint: 768,
-    //         settings: {
-    //             slidesToShow: 1,
-    //         }
-    //     },
-    //     {
-    //         breakpoint: 500,
-    //         settings: {
-    //             slidesToShow: 1,
-    //             arrows: false,
-    //             dots: true,
-    //         }
-    //     }
-    // ]
+    responsive: [
+        {
+            breakpoint: 1000,
+            settings: {
+                slidesToShow: 3,
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+    ]
 });
 
 
@@ -62,28 +43,32 @@ for (var i = 0; i < btnBlog.length; ++i) {
     });
 }
 const btnFilter_index = document.querySelectorAll(".select-carousel button");
+console.log(btnFilter_index)
 
 // const cardFilter = document.querySelectorAll(".results-table");
 
 const filterCard = e => {
-    document.querySelector(".active").classList.remove("active");
+    document.querySelector(".select-carousel .active").classList.remove("active");
     e.target.classList.add("active");
-    // cardFilter.forEach(card => {
-    //     card.classList.add("hide");
-    //
-    //     if (card.dataset.name === e.target.dataset.name || e.target.dataset.name === "all") {
-    //         card.classList.remove("hide")
-    //     }
-    // });
 }
 
 btnFilter_index.forEach(button => button.addEventListener("click", filterCard));
 
-// search bar
-const ctaSearch = document.getElementById("cta-search");
-const formSearch = document.getElementById("wrap-form");
 
-ctaSearch.addEventListener("click", () => {
-    ctaSearch.classList.toggle("active");
-    formSearch.classList.toggle("active");
+// scroll trang chủ
+$(document).ready(function () {
+    $(window).scroll(function () {
+        console.log(this.scrollY)
+        if (this.scrollY > 1400) {
+            $('.scroll-to-top').addClass("active")
+        } else {
+            $('.scroll-to-top').removeClass("active")
+        }
+    });
+
+    $("#scroll-to-top").click(function () {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 100)
+    })
 });

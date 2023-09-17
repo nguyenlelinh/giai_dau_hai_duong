@@ -21,50 +21,37 @@
     <title></title>
 </head>
 <body>
-
 <div class="wrapper">
     <nav class="navbar_header"></nav>
-    <nav class="body">
+    <nav class="body" id="body">
         <section class="container schedule">
 
             <div class="select-blog">
                 <div class="nav-blog">
-                                <span class="show-select open">
-                                    <p>Danh sách giải đấu</p>
-                                </span>
-                    <!--                <ul class="drop-nav-blog nav-tour-blog">-->
-                    <!--                    <li>-->
-                    <!--                        <a class="innative"  href="">-->
-                    <!--                            Kết thúc môn Bóng bàn Đại hội Thể thao toàn quốc lần thứ IX-->
-                    <!--                        </a>-->
-                    <!--                    </li>-->
-                    <!--                    <li>-->
-                    <!--                        <a href="">-->
-                    <!--                            Cử tạ Hải Dương giành 18 huy chương, phá 2 kỷ lục quốc gia-->
-                    <!--                        </a>-->
-                    <!--                    </li>-->
-                    <!--                    <li>-->
-                    <!--                        <a href="">-->
-                    <!--                            Ấm tình Hải Dương - Viêng Chăn kết nghĩa-->
-                    <!--                        </a>-->
-                    <!--                    </li>-->
-                    <!--                    <li>-->
-                    <!--                        <a href="">-->
-                    <!--                            Kết thúc môn Bóng bàn Đại hội Thể thao toàn quốc lần thứ IX-->
-                    <!--                        </a>-->
-                    <!--                    </li>-->
-                    <!--                </ul>-->
+                    <span class="show-select">
+                        <p>Danh sách giải đấu  <i class="fa-solid fa-angle-right"></i></p>
+                    </span>
                     <div class="drop-nav-blog nav-tour-blog">
-                        <button class="native" data-name="all">Kết thúc môn Bóng bàn Đại hội Thể thao toàn quốc lần thứ
-                            IX
-                        </button>
-                        <button data-name="hanoi">Giải vô địch Quốc gia</button>
-                        <button data-name="haiphong">HGiải Vô địch trẻ cầu lông Quốc gia lần thứ XII</button>
-                        <button data-name="sapa">Giải Vô địch trẻ cầu lông Quốc gia lần thứ XII</button>
-                        <button data-name="ninhbinh">Giải vô địch Quốc gia</button>
-                        <button data-name="hoian">Giải Vô địch trẻ cầu lông Quốc gia lần thứ XII</button>
+                        <a href="./detail">
+                            <button class="native" data-name="all">Kết thúc môn Bóng bàn Đại hội Thể thao toàn quốc lần
+                                thứ IX
+                            </button>
+                        </a>
+                        <a href="#">
+                            <button data-name="">Giải vô địch Quốc gia</button>
+                        </a>
+                        <a href="#">
+                            <button data-name="">Giải Vô địch trẻ cầu lông Quốc gia lần thứ XII</button>
+                        </a>
+                        <a href="#">
+                            <button data-name="">Giải Vô địch trẻ cầu lông Quốc gia lần thứ XII</button>
+                        </a>
+                        <a href="#">
+                            <button data-name="">Giải vô địch Quốc gia</button>
+                        </a>
                     </div>
                 </div>
+
             </div>
             <div class="results">
                 <div class="title-main">
@@ -72,9 +59,9 @@
                         <h2>Kết quả thi đấu giải vô địch Quốc gia</h2>
                     </div>
                     <div class="grid-filter" id="btn-grid">
-                        <button href="./detailDestination.html" class="btn-view">Xem lịch thi đấu
-                            <i class="fa-solid fa-angle-right"></i>
-                        </button>
+                        <a href="./category.html">
+                            <button class="btn-view">Xem lịch thi đấu <i class="fa-solid fa-angle-right"></i></button>
+                        </a>
                     </div>
                 </div>
                 <div class="child-carousel">
@@ -297,7 +284,7 @@
 
         </section>
     </nav>
-    <nav class="navbar_footer" style=".box-footer{ margin-top: 0}"></nav>
+    <nav class="navbar_footer"></nav>
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">

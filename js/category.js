@@ -1,3 +1,4 @@
+// show bảng và môn thi đấu
 const btnFilter = document.querySelectorAll(".btn-filter button");
 const cardFilter = document.querySelectorAll(".results-table");
 
@@ -16,6 +17,8 @@ const filterCard = e => {
 
 btnFilter.forEach(button => button.addEventListener("click", filterCard));
 
+
+//lịch trên trang thi đấu
 function calendar() {
     let date = new Date();
 
@@ -95,40 +98,20 @@ $('.slide-blog').not('.slick-initialized').slick({
     arrows: true,
     prevArrow: "<button type='button' class='slick-prev pull-left'><img src='/image/Group6272.svg' alt=\"\"  style=\"width: 20px; height: auto\"></button>",
     nextArrow: "<button type='button' class='slick-next pull-right'><img src='/image/Group6273.svg' alt=\"\"  style=\"width: 20px; height: auto\"></button>",
-    // responsive: [
-    //     // {
-    //     //     breakpoint: 1460,
-    //     //     settings: {
-    //     //         slidesToShow: 4,
-    //     //     }
-    //     // },
-    //     {
-    //         breakpoint: 1230,
-    //         settings: {
-    //             slidesToShow: 3,
-    //         }
-    //     },
-    //     {
-    //         breakpoint: 1000,
-    //         settings: {
-    //             slidesToShow: 2,
-    //         }
-    //     },
-    //     {
-    //         breakpoint: 768,
-    //         settings: {
-    //             slidesToShow: 1,
-    //         }
-    //     },
-    //     {
-    //         breakpoint: 500,
-    //         settings: {
-    //             slidesToShow: 1,
-    //             arrows: false,
-    //             dots: true,
-    //         }
-    //     }
-    // ]
+    responsive: [
+        {
+            breakpoint: 1000,
+            settings: {
+                slidesToShow: 5,
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 3,
+            }
+        },
+    ]
 });
 
 const btnFilterCurrent = document.querySelectorAll(".calendar");
@@ -140,6 +123,8 @@ const filterCardCalendar = e => {
     document.querySelector(".active")
 }
 btnFilterCurrent.forEach(div => div.addEventListener("click", filterCardCalendar));
+
+
 //button share and copy
 const fbButton = document.getElementById('fb-share-button');
 const url = window.location.href;
@@ -157,5 +142,20 @@ if(fbButton) {
     copyText.addEventListener('click', function () {
         navigator.clipboard.writeText($url);
         alert("Đã copy đường link ")
+    });
+}
+// danh sách giải đấu
+const btnBlog = document.getElementsByClassName('show-select');
+
+for (let i = 0; i < btnBlog.length; ++i) {
+    btnBlog[i].addEventListener('click', function () {
+        // Using an if statement to check the class
+        if (this.classList.contains('open')) {
+            // The box that we clicked has a class of bad so let's remove it and add the good class
+            this.classList.remove('open');
+        } else {
+            // The user obviously can't follow instructions so let's alert them of what is supposed to happen next
+            this.classList.add('open');
+        }
     });
 }

@@ -133,3 +133,17 @@
     background: #D4000E;
     margin-top: 15px;
 }
+@media (max-width: 1000px) {
+    .box-contact .wrap-contact .how-contact .main-contact {
+        padding: 0;
+    }
+    .box-contact .wrap-contact .how-contact .main-contact .show-contact {
+        display: none;
+        padding: 0;
+    }
+    .box-contact .wrap-contact .how-contact .main-contact .form-contact {
+        width: 70%;
+        gap: 0;
+        padding: 20px 20px;
+    }
+}
