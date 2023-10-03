@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="/css/slick.css_ver=5.8.7.css">
     <script src="/js/jquery_3.6.4_jquery.min.js"></script>
     <script src="/js/slick.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
 
 </head>
@@ -79,6 +82,7 @@
     </header>
     <div class="wrap-form" id="wrap-form">
         <form action="" class="wrap">
+            <div class="text-search" style="display: flex">
             <div class="input">
                 <label for="title"> </label>
                 <input type="text" id="title" required="" placeholder="Bạn đang tìm kiếm gì ?">
@@ -86,6 +90,19 @@
 
             <button type="submit" class="btn-search"><i class="fa-solid fa-magnifying-glass" style="color: #f2f2f2;"></i>
             </button>
+            </div>
+            <div class="form-option">
+                <select id="news-type" class="dropdown-toggle" type="button">
+                    <option selected>Tất cả</option>
+                    <option value="1">Tin tức</option>
+                    <option value="2">Thi đấu</option>
+                </select>
+                <div id="reportrange">
+                    <i class="fa fa-calendar"></i>&nbsp;
+                    <span></span> <i class="fa fa-caret-down"></i>
+                </div>
+            </div>
+
         </form>
     </div>
 

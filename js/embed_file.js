@@ -18,6 +18,7 @@ fetch('./footer.html')
 const menuChild = document.getElementsByClassName("menu-child");
 const boxMenu = document.getElementById("box-menu");
 const boxLogo = document.getElementById("box-logo");
+const formSearch = document.getElementById("wrap-form");
 const body = document.getElementById("body");
 
 for (let i = 0; i < menuChild.length; ++i) {
@@ -25,6 +26,7 @@ for (let i = 0; i < menuChild.length; ++i) {
         boxMenu.classList.toggle("active");
         boxLogo.classList.toggle("active");
         body.classList.toggle("hide");
+        formSearch.classList.remove("active")
         if (this.classList.contains('active')) {
             this.classList.remove('active');
         } else {
@@ -35,9 +37,10 @@ for (let i = 0; i < menuChild.length; ++i) {
 
 // search bar
 const ctaSearch = document.getElementById("cta-search");
-const formSearch = document.getElementById("wrap-form");
+const search_form = document.querySelector('.event-main');
 
 ctaSearch.addEventListener("click", () => {
     ctaSearch.classList.toggle("active");
     formSearch.classList.toggle("active");
+    search_form.classList.toggle("open");
 });

@@ -102,7 +102,7 @@ h7 {
     position: fixed;
     top: 0;
     left: -1%;
-    width: 48%;
+    width: 40%;
     height: 105vh;
     background-color: #D4000E;
     display: flex;
@@ -141,8 +141,6 @@ h7 {
     gap: 30px;
 }
 
-.box-navbar .wrap-navbar .box-menu {
-}
 
 .box-navbar .wrap-navbar .box-menu .wrap-menu {
     display: flex;
@@ -1102,6 +1100,11 @@ h7 {
     display: flex;
     flex-direction: column;
 }
+.events .event-main.open {
+    display: flex;
+    padding-top: 80px;
+    flex-direction: column;
+}
 
 .events .event-main .hot-new-main p {
     text-align: justify;
@@ -1358,6 +1361,7 @@ h7 {
 
 .wrap-form form {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(3px);
@@ -1366,19 +1370,36 @@ h7 {
     padding: 25px;
 }
 
-.wrap-form form > button {
+.wrap-form button {
     padding: 10px 20px;
     border-radius: 0px 4px 4px 0px;
     background: #D4000E;
     border: none;
 }
 
-.wrap-form form > div > input {
+.wrap-form .text-search input {
     padding: 10px;
-    width: 1140px;
+    width: 1230px;
     border: none;
     border-radius: 4px;
     background: #EEE;
+}
+.wrap-form .form-option{
+    display: flex;
+    width: 69%;
+    padding-top: 10px;
+    gap: 15px;
+}
+.wrap-form .form-option #news-type{
+    padding: 5px 5px;
+    border: 1px solid #ccc;
+}
+.wrap-form .form-option #reportrange{
+    background: #fff;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    width: 20%
 }
 
 .wrap-form.active {
@@ -1429,8 +1450,6 @@ h7 {
         transition: all 0.3s linear;
     }
 
-    .box-navbar .wrap-navbar .box-menu.active {
-    }
 
     .box-navbar .wrap-navbar .box-menu .wrap-menu .menu {
         flex-direction: column;
@@ -1539,11 +1558,11 @@ h7 {
         justify-content: normal;
     }
 
-      .wrap-form form > div > input {
+    .wrap-form .text-search input {
             width: 200px ;
        }
 
-    .wrap-form form > button {
+    .wrap-form form button {
         padding: 10px 15px;
 
     }
@@ -1559,6 +1578,9 @@ h7 {
 @media (max-width: 700px) {
     .wrap-form {
         top: 35%;
+    }
+    .box-navbar .wrap-navbar .box-menu.active {
+        width: 70%;
     }
         .box-navbar .wrap-navbar .box-logo.active a img {
         width: 80%;
@@ -1578,7 +1600,7 @@ h7 {
         padding-left: 0;
     }
 
-    .wrap-form form > div > input {
+    .wrap-form .text-search input {
         width: 130px;
     }
 }

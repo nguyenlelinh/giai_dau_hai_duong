@@ -72,3 +72,61 @@ $(document).ready(function () {
         }, 100)
     })
 });
+
+//tùy chọn search
+$(function() {
+    const start = moment().subtract(29, 'days');
+    const end = moment();
+
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('DD/MM/YYYY') + ' - ' + end.format('DD/MM/YYYY'));
+        $("#reportrange span").html()
+    }
+
+    $('#reportrange').daterangepicker({
+        "locale": {
+            "monthNames": [
+                "Tháng 1 năm",
+                "Tháng 2 năm",
+                "Tháng 3 năm",
+                "Tháng 4 năm",
+                "Tháng 5 năm",
+                "Tháng 6 năm",
+                "Tháng 7 năm",
+                "Tháng 8 năm",
+                "Tháng 9 năm",
+                "Tháng 10 năm",
+                "Tháng 11 năm",
+                "Tháng 12 năm"
+            ],
+            "daysOfWeek": [
+                "CN",
+                "Th 2",
+                "Th 3",
+                "Th 4",
+                "Th 5",
+                "Th 6",
+                "Th 7"
+            ],
+            "format": "DD/MM/YYYY",
+            "customRangeLabel": "Tùy chọn",
+            "applyLabel": "Áp dụng",
+            "cancelLabel": "Xóa",
+        },
+        startDate: start,
+        endDate: end,
+        cancelLabel: 'Xóa',
+        ranges: {
+            'Hôm nay': [moment(), moment()],
+            '30 ngày qua': [moment().subtract(29, 'days'), moment()],
+            '30 ngày tới':[moment(), moment().subtract(29, 'days')],
+        }
+    }, cb);
+    $('#reportrange').on('cancel.daterangepicker', function(ev, picker) {
+        $("#reportrange span").html('')  ;
+    });
+
+    cb(start, end);
+    window.onload= $("#reportrange span").html('Thời gian')  ;
+
+});
