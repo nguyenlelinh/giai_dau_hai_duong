@@ -17,6 +17,25 @@ const filterCard = e => {
 
 btnFilter.forEach(button => button.addEventListener("click", filterCard));
 
+//button share and copy
+const fbButton = document.getElementById('fb-share-button');
+const url = window.location.href;
+if(fbButton) {
+
+    fbButton.addEventListener('click', function () {
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + url,
+            'facebook-share-dialog',
+            'width=800,height=600'
+        );
+        return false;
+    });
+    const $url = $(location).attr('href');
+    const copyText = document.getElementById("copy-link");
+    copyText.addEventListener('click', function () {
+        navigator.clipboard.writeText($url);
+        alert("Đã copy đường link ")
+    });
+}
 
 //lịch trên trang thi đấu
 function calendar() {
@@ -53,10 +72,38 @@ function calendar() {
     const showCalendar = document.querySelector(".slide-blog");
     let lit = "";
 
-    let previous = new Date(date.getTime());
+    let previous = new Date();
+    let checkLoop = '';
+    const prevLastDay = new Date(
+        date.getFullYear(),
+        date.getMonth(),
+        0
+    );
     for (let i = 6; i > 0; i--) {
-        previous.setDate(date.getDate() - i);
 
+        let checkDate = date.getDate() - i;
+
+        if (checkDate < 1 && checkLoop !== 1) {
+            checkLoop = 1;
+            prevLastDay.setDate(prevLastDay.getDate() - 4);
+            for (let x = 0; x <= 3; x++) {
+
+                prevLastDay.setDate(prevLastDay.getDate() + 1);
+                lit +=
+                    `<div class="calendar" >
+                        <span class="date">${genDay(checkDayByDate = prevLastDay.getDay())}</span>
+                        <span class="day">${prevLastDay.getDate()}</span>
+                     </div>`
+            }
+
+            continue;
+        }
+
+        if (checkDate < 1) {
+            continue;
+        }
+
+        previous.setDate(checkDate);
         lit +=
             `<div class="calendar" >
                 <span class="date">${genDay(checkDayByDate = previous.getDay())}</span>
@@ -66,16 +113,46 @@ function calendar() {
     // Loop to add the dates of the current month
     lit += `<div class="calendar active">
                             <span class="date">${genDay(checkDayByDate = date.getDay())}</span>
-                            <span class="day">${date.getDate()}</span>
+                            <span class="day" data-name=${date} >${date.getDate()}</span>
                         </div>`;
 
+    const daysOfThisMonth = new Date(
+        date.getFullYear(),
+        date.getMonth() + 1,
+        0
+    ).getDate();
+
+    let checkLoop2 = '';
+
     for (let i = 1; i <= 7; i++) {
-        previous.setDate(date.getDate() + i);
+        let checkDate = date.getDate() + i;
+        previous.setDate(checkDate);
         lit +=
             `<div class="calendar" >
                 <span class="date">${genDay(checkDayByDate = previous.getDay())}</span>
                 <span class="day">${previous.getDate()}</span>
               </div>`
+
+        if (checkDate > daysOfThisMonth && checkLoop2 !== 1) {
+            checkLoop2 = 1;
+            let dayOfNextMonth = new Date(
+                date.getFullYear(),
+                date.getMonth() + 2,
+                0
+            );
+
+            for (let x = 1; x <= 4; x++) {
+                dayOfNextMonth.setDate(x);
+
+                lit +=
+                    `<div class="calendar" >
+                        <span class="date">${genDay(checkDayByDate = dayOfNextMonth.getDay())}</span>
+                        <span class="day">${dayOfNextMonth.getDate()}</span>
+                     </div>`
+            }
+
+            break;
+        }
     }
     showCalendar.innerHTML = lit;
 }
@@ -125,25 +202,6 @@ const filterCardCalendar = e => {
 btnFilterCurrent.forEach(div => div.addEventListener("click", filterCardCalendar));
 
 
-//button share and copy
-const fbButton = document.getElementById('fb-share-button');
-const url = window.location.href;
-if(fbButton) {
-
-    fbButton.addEventListener('click', function () {
-        window.open('https://www.facebook.com/sharer/sharer.php?u=' + url,
-            'facebook-share-dialog',
-            'width=800,height=600'
-        );
-        return false;
-    });
-    const $url = $(location).attr('href');
-    const copyText = document.getElementById("copy-link");
-    copyText.addEventListener('click', function () {
-        navigator.clipboard.writeText($url);
-        alert("Đã copy đường link ")
-    });
-}
 // danh sách giải đấu
 const btnBlog = document.getElementsByClassName('show-select');
 
