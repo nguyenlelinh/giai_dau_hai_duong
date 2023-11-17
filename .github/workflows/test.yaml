@@ -6,7 +6,7 @@ on:
 
 jobs:
   hello:
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
     steps:
       - name: Step hi
         run: echo "Hello"
