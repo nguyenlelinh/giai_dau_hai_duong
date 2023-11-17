@@ -2,7 +2,7 @@ name: Khai_test_workflow
 on:
     push:
       branches:
-        - feat/ci-cd
+        - [main]
 
 jobs:
   hello:
