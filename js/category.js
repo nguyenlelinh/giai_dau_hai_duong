@@ -130,7 +130,7 @@ function calendar() {
         lit +=
             `<div class="calendar" >
                 <span class="date">${genDay(checkDayByDate = previous.getDay())}</span>
-                <span class="day">${previous.getDate()}</span>
+                <span class="day"  data-name=${previous}>${previous.getDate()}</span>
               </div>`
 
         if (checkDate > daysOfThisMonth && checkLoop2 !== 1) {

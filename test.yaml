@@ -1,0 +1,12 @@
+name: Khai_test_workflow
+on:
+    push:
+      branches:
+        - feat/ci-cd
+
+jobs:
+  hello:
+    runs-on: ubuntu-lastest
+    steps:
+      - name: Step hi
+        run: echo "Hello"

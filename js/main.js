@@ -75,12 +75,11 @@ $(document).ready(function () {
 
 //tùy chọn search
 $(function() {
-    const start = moment().subtract(29, 'days');
+    const start = moment().subtract(365, 'days');
     const end = moment();
 
     function cb(start, end) {
         $('#reportrange span').html(start.format('DD/MM/YYYY') + ' - ' + end.format('DD/MM/YYYY'));
-        $("#reportrange span").html()
     }
 
     $('#reportrange').daterangepicker({
