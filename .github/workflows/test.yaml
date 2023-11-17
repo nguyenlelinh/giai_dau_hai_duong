@@ -1,8 +1,8 @@
-name: Khai_test_workflow
+name: khai_test_workflow
 on:
     push:
       branches:
-        - [main]
+        - main
 
 jobs:
   hello:
